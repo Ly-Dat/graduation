@@ -100,13 +100,13 @@ const guests = [
     name: "Eiu❤️",
     code: "110602",
     type: "love",
-    message: "Cảm ơn em đã luôn ở bên anh trong suốt hành trình này, cùng anh trải qua những năm tháng tươi đẹp nhất. Thật tuyệt khi vào khoản khắc tuyệt vời này có em ở bên cạnh anh, anh pé iu em nhiều nhắm. ❤️"
+    message: "Cảm ơn em đã luôn ở bên anh trong suốt hành trình này, cùng anh trải qua những năm tháng tươi đẹp nhất. Thật tuyệt khi vào khoảnh khắc tuyệt vời này có em ở bên cạnh anh, anh pé iu em nhiều nhắm. ❤️"
   },
   {
     name: "chị Thảo",
-    code: "160803",
+    code: "190803",
     type: "birthday",
-    birthday: "16/08",
+    birthday: "19/08",
     message: "Cảm ơn chị Thảo đã giành thời gian tham gia buổi lễ tốt nghiệp của em. Ôi em ko có gì hơn chỉ muốn gửi tới chị một lời cảm ơn chân thành nhất. Cảm ơn chị!"
   },
   {
@@ -199,7 +199,7 @@ const TAG_ICONS = {
 
 const TAGS = {
   normal: (g) => "New chapter · New journey · New me 🎓",
-  birthday: (g) => `Chúc mừng sinh nhật bạn iu vào ngày ${g.birthday ? g.birthday + ' ' : ''} chúc bạn iu có một ngày sinh nhật thật tuyệt vời nhá! 🎂🎓`,
+  birthday: (g) => `Chúc mừng sinh nhật bạn vào ngày ${g.birthday ? g.birthday + ' ' : ''} chúc bạn có một ngày sinh nhật thật tuyệt vời nhá! 🎂🎓`,
   love: (g) => "Gửi cô gái xinh đẹp của anh · Cảm ơn em vì đã luôn là ánh sáng dịu dàng, rực rỡ nhất trong cuộc đời anh ✨"
 };
 
