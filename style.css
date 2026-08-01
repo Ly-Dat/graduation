@@ -638,3 +638,8 @@ footer.foot{ text-align:center; color:rgba(247,242,230,0.55); font-size:12.5px; 
   transform:translateY(-1px);
   box-shadow:0 8px 16px rgba(0,0,0,0.15);
 }
+
+.close-x{
+  min-width: 23px;
+  min-height: 22px;
+}

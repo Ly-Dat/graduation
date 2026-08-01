@@ -199,7 +199,7 @@ const TAG_ICONS = {
 
 const TAGS = {
   normal: (g) => "New chapter · New journey · New me 🎓",
-  birthday: (g) => `Chúc mừng sinh nhật bạn vào ngày ${g.birthday ? g.birthday + ' ' : ''} chúc bạn có một ngày sinh nhật thật tuyệt vời nhá! 🎂🎓`,
+  birthday: (g) => `Chúc mừng sinh nhật ${g.name ? g.name + ' ' : ''} vào ngày ${g.birthday ? g.birthday + ' ' : ''} chúc ${g.name ? g.name + ' ' : ''} có một ngày sinh nhật thật tuyệt vời nhá! 🎂🎓`,
   love: (g) => "Gửi cô gái xinh đẹp của anh · Cảm ơn em vì đã luôn là ánh sáng dịu dàng, rực rỡ nhất trong cuộc đời anh ✨"
 };
 
@@ -247,12 +247,28 @@ let confettiParticles = [];
 let confettiRAF = null;
 let confettiStopAt = 0;
 
+function getViewportSize(){
+  // visualViewport chính xác hơn window.innerWidth/Height trên mobile,
+  // vì innerHeight có thể bị tính sai khi thanh địa chỉ trình duyệt đang ẩn/hiện
+  const vv = window.visualViewport;
+  return {
+    w: vv ? vv.width : window.innerWidth,
+    h: vv ? vv.height : window.innerHeight
+  };
+}
+
 function resizeConfettiCanvas(){
   if (!confettiCanvas) return;
-  confettiCanvas.width = window.innerWidth;
-  confettiCanvas.height = window.innerHeight;
+  const { w, h } = getViewportSize();
+  // cộng thêm buffer chiều cao để phòng trường hợp thanh địa chỉ ẩn đi
+  // sau khi đã resize, lộ thêm phần màn hình phía dưới
+  confettiCanvas.width = w;
+  confettiCanvas.height = h + 150;
 }
 window.addEventListener('resize', resizeConfettiCanvas);
+if (window.visualViewport){
+  window.visualViewport.addEventListener('resize', resizeConfettiCanvas);
+}
 
 function spawnConfettiParticle(){
   const w = confettiCanvas.width;
@@ -317,6 +333,10 @@ function confettiLoop(){
 function launchConfetti(durationMs = 2600){
   if (!confettiCtx) return;
   resizeConfettiCanvas();
+  // resize lại lần nữa sau một nhịp ngắn: lúc reveal-panel vừa mở,
+  // trình duyệt mobile (đặc biệt Safari) có thể vẫn đang ẩn thanh địa chỉ,
+  // nên chiều cao viewport lúc này chưa "chốt" xong
+  setTimeout(resizeConfettiCanvas, 350);
   confettiStopAt = Date.now() + durationMs;
   if (!confettiRAF){
     confettiRAF = requestAnimationFrame(confettiLoop);
@@ -369,13 +389,16 @@ const mapIframe = document.getElementById('mapIframe');
 
 const MAP_EMBED_SRC = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3915.792105830862!2d106.6822502!3d11.054207699999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174cfd677c789d1%3A0x2c2177908d83fb67!2sB%C3%ACnh%20D%C6%B0%C6%A1ng%20Convention%20%26%20Exhibition%20Center!5e0!3m2!1sen!2s!4v1785469279317!5m2!1sen!2s";
 
-let mapLoaded = false;
 mapToggleBtn.addEventListener('click', () => {
   const isOpen = mapPanel.classList.toggle('open');
   mapToggleBtn.classList.toggle('open', isOpen);
   mapToggleText.textContent = isOpen ? 'Ẩn bản đồ' : 'Xem bản đồ';
-  if (isOpen && !mapLoaded){
+  if (isOpen){
+    // luôn set lại src mỗi lần mở để map reset về đúng vị trí mặc định,
+    // không giữ lại trạng thái kéo/zoom lần trước
     mapIframe.src = MAP_EMBED_SRC;
-    mapLoaded = true;
+  } else {
+    // xoá src khi ẩn để giải phóng iframe và đảm bảo lần sau load lại từ đầu
+    mapIframe.src = '';
   }
 });
