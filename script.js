@@ -174,17 +174,24 @@ const guests = [
     message: "Cảm ơn Phúc Ngân đã giành thời gian tham gia buổi lễ tốt nghiệp của lidet. Cảm ơn fngan đã không quản đường xá xa xôi để đến tham gia cùng lidet và tổ mình. Cảm ơn fngan nhiều nha!"
   },
   {
-    name: "Quỳnh Hương",
-    code: "160205",
-    type: "normal",
-    message: "Cảm ơn bạn Hương đã đến với buổi lễ tốt nghiệp của lidet ngày hôm nay. Lời nói đầu tiên xin được trân thành gửi tới chị 1 lời cảm ơn. Lời nói thứ 2 cũng là lời nói đầu tiên cảm ơn!"
-  },
-  {
     name: "cô Lyen",
     code: "000000",
     type: "normal",
     message: "Ngày 22/8 này tụi em có lễ tốt nghiệp nên em muốn mời cô đến tham dự cùng tụi em ạ. Hôm đó có em, Hưng với anh già tốt nghiệp chung luôn. Tụi em rất mong được gặp cô trong ngày đặc biệt này ạ!"
   },
+  {
+    name: "Quỳnh Hương",
+    code: "170205",
+    type: "normal",
+    message: "Cảm ơn bạn Hương đã đến với buổi lễ tốt nghiệp của lidet ngày hôm nay. Lời nói đầu tiên xin được chân thành gửi tới chị 1 lời cảm ơn. Lời nói thứ 2 cũng là lời nói đầu tiên cảm ơn!"
+  },
+  {
+    name: "Gia Khang",
+    code: "210605",
+    type: "normal",
+    message: "Hello ngài Khang lidet xin trân trọng kính mời ngài Khang cùng tham gia buổi lễ tốt nghiệp năm nay. Xin trân trọng đc mời ngài Khang nếu có thời gian có thể đến tham gia cùng lidet và ngài Hưng. Cảm ơn ngài Khang rất nhiều!"
+  },
+  
 ];
 
 // ---- avatar dùng chung cho vòng tròn lớn (luôn là ảnh của Đạt) ----
