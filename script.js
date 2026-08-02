@@ -222,6 +222,24 @@ const guests = [
     birthday: "26/08",
     message: "Ơi ông ơi, 22/8 này tui có buổi lễ tốt nghiệp nè. Nếu mà không bận học thì ông tới chơi với tui và nhóm mình nha. Cũng lâu rồi nhóm mình chưa có dịp đi chơi và gặp mặt đông đủ với nhau. Hôm đó nhớ ghé chơi xíu nha ông!"
   },
+  {
+    name: "Nhã Tú",
+    code: "250105",
+    type: "normal",
+    message: "Cảm ơn chị Tú đã giành thời gian tới dự buổi lễ tốt nghiệp của lidet. Ôi thật cảm động làm sao khi chị Tú đã không quản đường xá xa xôi để đến tham gia cùng lidet. Đúng là chị Tú xink đẹp tài giỏi vừa xink vừa tốt, cảm ơn chị Tú rất nhiều!"
+  },
+  {
+    name: "Mỹ An",
+    code: "081105",
+    type: "normal",
+    message: "Ôi thật là cảm ơn chế An đã đồng ý tới dự buổi lễ tốt nghiệp của lidet. Thật vinh dự khi mà chế An có thể đến và tham dự chung với lidet. Ôi người gì mà vừa xink gái lại tốt bụng. Cảm ơn chế An nhiều nhiều nhá!"
+  },
+  {
+    name: "Bảo Lâm",
+    code: "111105",
+    type: "normal",
+    message: "Thật cảm ơn chú Lâm đã giành những giây phút thời gian quý báo đến tham dự buổi lễ tốt nghiệp của lidet. Ôi có chú Lâm tới thì vui gì bằng, thế nhá chốt đi nhá. Cảm ơn chú Lâm rất nhiều!"
+  },
 ];
 
 // ---- avatar dùng chung cho vòng tròn lớn (luôn là ảnh của Đạt) ----
