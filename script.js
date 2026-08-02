@@ -191,7 +191,37 @@ const guests = [
     type: "normal",
     message: "Hello ngài Khang lidet xin trân trọng kính mời ngài Khang cùng tham gia buổi lễ tốt nghiệp năm nay. Xin trân trọng đc mời ngài Khang nếu có thời gian có thể đến tham gia cùng lidet và ngài Hưng. Cảm ơn ngài Khang rất nhiều!"
   },
-  
+  {
+    name: "Anh Khoa",
+    code: "180405",
+    type: "normal",
+    message: "Cảm ơn bạn Anh Khoa đã giành thời gian tham gia buổi lễ tốt nghiệp của Lý Đạt. Nếu sắp xếp được thời gian thì Anh Khoa có thể ghé tham dự cùng Lý Đạt và nhóm mình nha. Cảm ơn Khoa rất nhiều!"
+  },
+  {
+    name: "Bảo Trung",
+    code: "010605",
+    type: "normal",
+    message: "Cảm ơn bạn Trung đã giành thời gian tới dự buổi lễ tốt nghiệp của Lý Đạt. Rất vui nếu Trung có thể xắp xếp đc thời gian với đến tham dự cùng Lý Đạt. Cảm ơn Trung nhiều và hẹn gặp lại vào ngày 22/8 nha!"
+  },
+  {
+    name: "Hoàng Phúc",
+    code: "171105",
+    type: "normal",
+    message: "Cảm ơn Hoàng Phúc đã tới dự buổi lễ tốt nghiệp của Lý Đạt. Lâu rồi anh em mình chưa gặp nhau, hy vọng có thể gặp Phúc và mọi người tại buổi lễ tốt nghiệp của Lý Đạt. Nên nếu có thời gian thì ghé tham dự cùng Lý Đạt nha!"
+  },
+  {
+    name: "Việt Hoàng",
+    code: "241105",
+    type: "normal",
+    message: "Ngày 22/8 này Lý Đạt có lễ tốt nghiệp nên muốn mời Việt Hoàng đến tham dự cùng Lý Đạt nha. Cảm ơn Việt Hoàng đã không quản đường xá xa xôi để đến tham gia cùng Lý Đạt và nhóm mình. Cảm ơn Việt Hoàng nhiều nha!"
+  },
+  {
+    name: "Tân Trí",
+    code: "260805",
+    type: "birthday",
+    birthday: "26/08",
+    message: "Ơi ông ơi, 22/8 này tui có buổi lễ tốt nghiệp nè. Nếu mà không bận học thì ông tới chơi với tui và nhóm mình nha. Cũng lâu rồi nhóm mình chưa có dịp đi chơi và gặp mặt đông đủ với nhau. Hôm đó nhớ ghé chơi xíu nha ông!"
+  },
 ];
 
 // ---- avatar dùng chung cho vòng tròn lớn (luôn là ảnh của Đạt) ----
