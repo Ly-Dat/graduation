@@ -454,7 +454,7 @@ const mapToggleText = document.getElementById('mapToggleText');
 const mapPanel = document.getElementById('mapPanel');
 const mapIframe = document.getElementById('mapIframe');
 
-const MAP_EMBED_SRC = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3915.792105830862!2d106.6822502!3d11.054207699999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174cfd677c789d1%3A0x2c2177908d83fb67!2sB%C3%ACnh%20D%C6%B0%C6%A1ng%20Convention%20%26%20Exhibition%20Center!5e0!3m2!1sen!2s!4v1785469279317!5m2!1sen!2s";
+const MAP_EMBED_SRC = "https://maps.google.com/maps?q=Hall+B,+WTC+Expo,+Binh+Duong&t=&z=17&ie=UTF8&iwloc=&output=embed";
 
 mapToggleBtn.addEventListener('click', () => {
   const isOpen = mapPanel.classList.toggle('open');
