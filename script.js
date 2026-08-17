@@ -448,6 +448,7 @@ document.getElementById('closeReveal').addEventListener('click', () => {
   revealPanel.classList.remove('show');
 });
 
+
 // ---- map toggle ----
 const mapToggleBtn = document.getElementById('mapToggleBtn');
 const mapToggleText = document.getElementById('mapToggleText');
