@@ -454,7 +454,7 @@ const mapToggleText = document.getElementById('mapToggleText');
 const mapPanel = document.getElementById('mapPanel');
 const mapIframe = document.getElementById('mapIframe');
 
-const MAP_EMBED_SRC = "https://maps.google.com/maps?q=Hall+B,+WTC+Expo,+Binh+Duong&t=&z=17&ie=UTF8&iwloc=&output=embed";
+const MAP_EMBED_SRC = "https://maps.google.com/maps?q=Hall+B,+WTC+Expo,+Binh+Duong&t=&z=17&ie=UTF8&iwloc=A&output=embed";
 
 mapToggleBtn.addEventListener('click', () => {
   const isOpen = mapPanel.classList.toggle('open');
